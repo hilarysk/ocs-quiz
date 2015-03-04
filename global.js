@@ -58,7 +58,6 @@ scores.push("w");
 // result q3, text answer q4
 
 
-
 if (user_answer3.toLowerCase() === "b." || user_answer3.toLowerCase() === "b") {
   var user_answer4 = prompt("You beautiful golden sunfish. You got it right! Let's run away into the ocean." + "\n\nQuestion 4: " +
                             questions[3].question +
