@@ -1,9 +1,10 @@
 var questions = [{question: "Who is most likely to wear a dinosaur shirt?"}, 
                  {question: "Who served in the US Air Force?"}, 
                  {question: "Who likes to play online chess?"},
-                 {question: "Who used to groom dogs for a living?"}];
+                 {question: "Who used to groom dogs for a living?"},
+                 {question: "Who is a professional actor?"}];
                  
-var answers = {answer1: "Beth", answer2: "Sumeet", answer3: "Andrew", answer4: "Heather"};
+var answers = {answer1: "Beth", answer2: "Sumeet", answer3: "Andrew", answer4: "Heather", answer5: "Rahul"};
 
 var scores = [];
 
@@ -15,7 +16,8 @@ var answerOptions = ("\nA. " +
   answers.answer1 + "\nB. " + 
   answers.answer2 + "\nC. " + 
   answers.answer3 + "\nD. " + 
-  answers.answer4);
+  answers.answer4 + "\nE. " +
+  answers.answer5);
 
 
 //q1
@@ -71,13 +73,29 @@ scores.push("w");
                               answerOptions);
 }
 
-// result q4, score of game
+// result q4, text answer q5
+
 
 if (user_answer4.toLowerCase() === "d." || user_answer4.toLowerCase() === "d") {
+  var user_answer5 = prompt("I love you." + "\n\nQuestion 5: " +
+                            questions[4].question +
+                            "\n" + question_info +
+                            answerOptions);
+scores.push("w");
+} else {
+    var user_answer5 = prompt("INCORRECT!! GAWSH...TINA! Eat your brain-food!! The right answer is Heather! Jeez..."  + "\n\nQuestion 5: " +
+                              questions[4].question + 
+                              "\n" + question_info +
+                              answerOptions);
+}
+
+// result q5, score of game
+
+if (user_answer5.toLowerCase() === "e." || user_answer5.toLowerCase() === "e") {
   scores.push("w");
-  alert("I love you. \n\nThanks for playing!\n\nYour score is: " + 
+  alert("Your smarts warm my hearts. Let's get matching tattoos and eat waffles.\n\nThanks for playing!\n\nYour score is: " + 
         scores.length + " correct out of " + questions.length + ", or " + (scores.length/questions.length) * 100 + "%.");
 } else {
-  alert("INCORRECT!! GAWSH...TINA! Eat your brain-food!! The right answer is Heather! Jeez...\n\nThanks for playing...I guess. \n\nYour score is: " + 
+  alert("Wow. I can't even. If you weren't a moron, you would've picked Rahul.\n\nThanks for playing...I guess. \n\nYour score is: " + 
         scores.length + " correct out of " + questions.length + ", or " + (scores.length/questions.length) * 100 + "%.");
 }
