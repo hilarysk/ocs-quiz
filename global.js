@@ -7,6 +7,8 @@ var answers = {answer1: "Beth", answer2: "Sumeet", answer3: "Andrew", answer4: "
 
 var scores = [];
 
+var question_info = "(Please enter the letter which corresponds to your answer.)"
+
 
 //Tried to refactor by pulling repetitive code into function, but it's not working - returns undefined. 
 var answerOptions = ("\nA. " + 
@@ -19,7 +21,7 @@ var answerOptions = ("\nA. " +
 //q1
 
 
-var user_answer1 = prompt("Question 1: " + questions[0].question + "\n" + answerOptions);
+var user_answer1 = prompt("Question 1: " + questions[0].question + "\n" + question_info + "\n" + answerOptions);
                           
                           // can make the answer section a function that we call in each question prompt.
                        
@@ -29,11 +31,13 @@ var user_answer1 = prompt("Question 1: " + questions[0].question + "\n" + answer
 if (user_answer1.toLowerCase() === "c." || user_answer1.toLowerCase() === "c") {
   var user_answer2 = prompt("Good job, kiddo! You were right! Here's a cupacke!" + "\n\nQuestion 2: " +
                             questions[1].question + 
+                            "\n" + question_info +
                             answerOptions);
   scores.push("w");
 } else {
     var user_answer2 = prompt("Are you fucking kidding me? You're a terrible person. Obviously, it's Andrew."  + "\n\nQuestion 2: " +
                               questions[1].question + 
+                              "\n" + question_info +
                               answerOptions);} 
 
 // result q2, text answer q3
@@ -42,11 +46,13 @@ if (user_answer1.toLowerCase() === "c." || user_answer1.toLowerCase() === "c") {
 if (user_answer2.toLowerCase() === "a." || user_answer2.toLowerCase() === "a") {
   var user_answer3 = prompt("Totes! You're a fantastic human being. Excellent choice." + "\n\nQuestion 3: " +
                             questions[2].question + 
+                            "\n" + question_info +
                             answerOptions);
 scores.push("w");                           
 } else {
     var user_answer3 = prompt("Dumbass. Hello? It's Beth."  + "\n\nQuestion 3: " +
                               questions[2].question +
+                              "\n" + question_info +
                               answerOptions);}
 
 // result q3, text answer q4
@@ -55,12 +61,14 @@ scores.push("w");
 
 if (user_answer3.toLowerCase() === "b." || user_answer3.toLowerCase() === "b") {
   var user_answer4 = prompt("You beautiful golden sunfish. You got it right! Let's run away into the ocean." + "\n\nQuestion 4: " +
-                            questions[3].question + 
+                            questions[3].question +
+                            "\n" + question_info +
                             answerOptions);
 scores.push("w");
 } else {
     var user_answer4 = prompt("I'm ashamed to call you family. You're garbage. The CORRECT answer was Sumeet."  + "\n\nQuestion 4: " +
                               questions[3].question + 
+                              "\n" + question_info +
                               answerOptions);
 }
 
